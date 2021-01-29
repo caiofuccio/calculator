@@ -29,7 +29,6 @@
   width: 32vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   align-items: center;
   background-color: rgb(94, 102, 109);
   border: 3px solid rgb(44, 48, 51);
@@ -51,6 +50,51 @@
   border: 3px solid rgb(44, 48, 51);
   border-radius: 15px;
   font-size: 35px;
+  cursor: default;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vh;
+  height: 44vh;
+  width: 27vw;
+}
+
+.buttons button {
+  border: 3px solid rgb(44, 48, 51);
+  border-radius: 15px;
+  font-size: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  border: 3px solid rgb(137, 144, 148);
+  box-shadow: 0 0 6px rgb(137, 144, 148);
+}
+
+.operator {
+  background-color: rgb(255, 200, 137);
+}
+
+#equal {
+  background-color: rgb(130, 240, 130);
+}
+
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#backspace {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#clear,
+#backspace {
+  background-color: rgb(255, 163, 163);
 }
 
 /* Footer */
@@ -65,4 +109,10 @@ footer {
   padding-left: 20px;
   padding-right: 30px;
   align-items: center;
+}
+
+.github-link:hover {
+  transition: transform 1s;
+  transform: rotateY(360deg);
+  transform-style: preserve-3d;
 }

@@ -1,12 +1,14 @@
 /* Presets */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Lexend Mega", sans-serif;
 }
 
-.calculator {
+.calculator-page {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -16,7 +18,7 @@
 }
 
 /* Page Title */
-.page-title {
+.title {
   height: 15vh;
   font-size: 45px;
   text-align: center;
@@ -26,29 +28,25 @@
 /* Calculator */
 .container {
   height: 75vh;
-  width: 32vw;
+  width: 29.7vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(94, 102, 109);
-  border: 3px solid rgb(44, 48, 51);
-  border-radius: 15px;
+  background-color: rgb(63, 63, 63);
   margin-top: 2vh;
+  padding: 1vh;
 }
 
 .display {
-  height: 18vh;
-  width: 27vw;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
+  height: 20vh;
+  width: 29vw;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: end;
   background-color: rgb(230, 230, 230);
-  border: 3px solid rgb(44, 48, 51);
-  border-radius: 15px;
+  border: 2px solid rgb(44, 48, 51);
   font-size: 35px;
   cursor: default;
 }
@@ -56,44 +54,42 @@
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1vh;
-  height: 44vh;
-  width: 27vw;
+  height: 55vh;
+  width: 29vw;
 }
 
 .buttons button {
-  border: 3px solid rgb(44, 48, 51);
-  border-radius: 15px;
+  border: 2px solid rgb(44, 48, 51);
   font-size: 30px;
   outline: none;
   cursor: pointer;
 }
 
-.buttons button:hover {
-  border: 3px solid rgb(137, 144, 148);
+/* .buttons button:hover {
+  border: 2px solid rgb(137, 144, 148);
   box-shadow: 0 0 6px rgb(137, 144, 148);
-}
+} */
 
-.operator {
+[data-operator] {
   background-color: rgb(255, 200, 137);
 }
 
-#equal {
+[data-equal] {
   background-color: rgb(130, 240, 130);
 }
 
-#clear {
+[data-all-clear] {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-#backspace {
+[data-clear] {
   grid-column-start: 3;
   grid-column-end: 5;
 }
 
-#clear,
-#backspace {
+[data-all-clear],
+[data-clear] {
   background-color: rgb(255, 163, 163);
 }
 

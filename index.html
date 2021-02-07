@@ -6,46 +6,48 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="shortcut icon" href="assets/calc-icon.png" />
   </head>
   <body>
-    <section class="calculator">
-      <h1 class="page-title">Calculator</h1>
+    <section class="calculator-page">
+      <h1 class="title">Calculator</h1>
+
       <div class="container">
         <div class="display">
-          <output type="text" class="user-input">0</output>
-          <output type="text" class="result">0</output>
+          <output type="text" class="previous-input"></output>
+          <output type="text" class="current-input"></output>
         </div>
         <div class="buttons">
-          <button id="clear">CE</button>
-          <button id="backspace">C</button>
-
-          <button class="digit" id="seven">7</button>
-          <button class="digit" id="eight">8</button>
-          <button class="digit" id="nine">9</button>
-          <button class="operator" id="divide">÷</button>
-
-          <button class="digit" id="four">4</button>
-          <button class="digit" id="five">5</button>
-          <button class="digit" id="six">6</button>
-          <button class="operator" id="multipy">×</button>
-
-          <button class="digit" id="one">1</button>
-          <button class="digit" id="two">2</button>
-          <button class="digit" id="three">3</button>
-          <button class="operator" id="subtract">-</button>
-
-          <button class="digit" id="zero">0</button>
-          <button class="digit" id="point">.</button>
-          <button id="equal">=</button>
-          <button class="operator" id="add">+</button>
+          <button data-all-clear>AC</button>
+          <button data-clear>C</button>
+          <button data-number>7</button>
+          <button data-number>8</button>
+          <button data-number>9</button>
+          <button data-operator>÷</button>
+          <button data-number>4</button>
+          <button data-number>5</button>
+          <button data-number>6</button>
+          <button data-operator>×</button>
+          <button data-number>1</button>
+          <button data-number>2</button>
+          <button data-number>3</button>
+          <button data-operator>-</button>
+          <button data-number>0</button>
+          <button data-number>.</button>
+          <button data-equal>=</button>
+          <button data-operator>+</button>
         </div>
       </div>
+
       <footer>
         <div class="project-info">
           <p>The Odin Project</p>
@@ -57,6 +59,4 @@
       </footer>
     </section>
   </body>
-
-  <script src="script.js"></script>
 </html>

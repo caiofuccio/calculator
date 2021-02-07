@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend Mega", sans-serif;
+  font-family: 'Lexend Mega', sans-serif;
 }
 
 .calculator-page {
@@ -40,15 +40,22 @@
 .display {
   height: 20vh;
   width: 29vw;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: end;
   background-color: rgb(230, 230, 230);
   border: 2px solid rgb(44, 48, 51);
-  font-size: 35px;
   cursor: default;
+}
+
+.current-input {
+  font-size: 40px;
+}
+
+.previous-input {
+  font-size: 30px;
 }
 
 .buttons {

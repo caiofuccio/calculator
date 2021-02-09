@@ -43,6 +43,8 @@ class Calculator {
   }
 
   appendOperator(operator) {
+    // Turn result flag false if it's true and the user press an operator
+    if (this.isResult === true) this.isResult = false;
     // In case there's no input to operate, simply return
     if (this.currentInput === '') return;
     //In case there's a previous input, calculate the result
@@ -54,7 +56,7 @@ class Calculator {
   }
 
   calculate() {
-    let result = 0;
+    let result;
     const previousOperand = parseFloat(this.previousInput);
     const currentOperand = parseFloat(this.currentInput);
 
@@ -77,6 +79,9 @@ class Calculator {
       default:
         return;
     }
+
+    // Rounding result so it doesn't overflow the screen
+    result = Math.round(Number(result) * 1e6) / 1e6;
 
     this.currentInput = result.toString();
     this.previousInput = '';

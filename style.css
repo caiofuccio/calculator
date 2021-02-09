@@ -35,6 +35,7 @@
   background-color: rgb(63, 63, 63);
   margin-top: 2vh;
   padding: 1vh;
+  box-shadow: 9px 7px rgb(173, 173, 173);
 }
 
 .display {
@@ -125,7 +126,6 @@ footer {
   bottom: 2vh;
   left: 0px;
   right: 0px;
-  /* background-color: rgb(170, 170, 170); */
   padding-left: 20px;
   padding-right: 30px;
   align-items: center;
@@ -135,4 +135,43 @@ footer {
   transition: transform 1s;
   transform: rotateY(360deg);
   transform-style: preserve-3d;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .container {
+    width: 40.8vw;
+  }
+
+  .display {
+    width: 40vw;
+  }
+
+  .buttons {
+    width: 40vw;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 66vw;
+    margin-top: 0;
+    box-shadow: 6px 5px rgb(173, 173, 173);
+  }
+
+  .display {
+    width: 65vw;
+  }
+
+  .buttons {
+    width: 65vw;
+  }
+
+  footer {
+    font-size: 10px;
+  }
 }

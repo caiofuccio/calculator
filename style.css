@@ -72,10 +72,9 @@
   cursor: pointer;
 }
 
-/* .buttons button:hover {
-  border: 2px solid rgb(137, 144, 148);
-  box-shadow: 0 0 6px rgb(137, 144, 148);
-} */
+[data-number] {
+  background-color: rgb(218, 218, 218);
+}
 
 [data-operator] {
   background-color: rgb(255, 200, 137);
@@ -98,6 +97,24 @@
 [data-all-clear],
 [data-clear] {
   background-color: rgb(255, 163, 163);
+}
+
+/* Buttons hover */
+[data-number]:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+[data-operator]:hover {
+  background-color: rgb(255, 166, 64);
+}
+
+[data-equal]:hover {
+  background-color: rgb(60, 255, 60);
+}
+
+[data-all-clear]:hover,
+[data-clear]:hover {
+  background-color: rgb(255, 119, 119);
 }
 
 /* Footer */

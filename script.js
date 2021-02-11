@@ -174,6 +174,11 @@ window.addEventListener('keydown', (e) => {
       calculator.appendOperator('÷');
       calculator.updateDisplay();
       break;
+    case '.':
+    case ',':
+      calculator.appendNumber('.');
+      calculator.updateDisplay();
+      break;
     default:
       if (!validNumbers.includes(e.key)) return;
 

@@ -23,11 +23,11 @@ The operations are calculated one by one, but the user can continuously enter da
 
 ## Learning Topics
 
--Use of data attributes to group similar HTML elements on a custom set.
--CSS grids.
--Simple css animations.
--Using media queries to create responsive pages that can be seen in different devices.
--JavaScript classes and objects.
--Creation of objects through classes and use of their properties and methods.
--Addition of keyboard support using event listeners.
--Extensive use of debugging tools, as Chrome DevTools.
+- Use of data attributes to group similar HTML elements on a custom set.
+- CSS grids.
+- Simple css animations.
+- Using media queries to create responsive pages that can be seen in different devices.
+- JavaScript classes and objects.
+- Creation of objects through classes and use of their properties and methods.
+- Addition of keyboard support using event listeners.
+- Extensive use of debugging tools, as Chrome DevTools.

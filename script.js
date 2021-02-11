@@ -38,6 +38,8 @@ class Calculator {
       this.currentInput = number;
       return;
     }
+    // Prevents user from writing multiple zeros to the left
+    if (this.currentInput === '0' && number === '0') return;
 
     this.currentInput += number;
   }
@@ -135,4 +137,47 @@ equalButton.addEventListener('click', () => {
   calculator.calculate();
   calculator.markAsResult();
   calculator.updateDisplay();
+});
+
+// Keyboard support
+const validNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+
+window.addEventListener('keydown', (e) => {
+  switch (e.key) {
+    case 'Backspace':
+      calculator.delete();
+      calculator.updateDisplay();
+      break;
+    case 'Escape':
+      calculator.clear();
+      calculator.updateDisplay();
+      break;
+    case '=':
+    case 'Enter':
+      calculator.calculate();
+      calculator.markAsResult();
+      calculator.updateDisplay();
+      break;
+    case '+':
+      calculator.appendOperator('+');
+      calculator.updateDisplay();
+      break;
+    case '-':
+      calculator.appendOperator('-');
+      calculator.updateDisplay();
+      break;
+    case '*':
+      calculator.appendOperator('×');
+      calculator.updateDisplay();
+      break;
+    case '/':
+      calculator.appendOperator('÷');
+      calculator.updateDisplay();
+      break;
+    default:
+      if (!validNumbers.includes(e.key)) return;
+
+      calculator.appendNumber(e.key);
+      calculator.updateDisplay();
+  }
 });
